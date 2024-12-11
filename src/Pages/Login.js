@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../Styles/Login.css';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import { handleSuccess, handleError } from '../utils';

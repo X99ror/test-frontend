@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { Navigate, Routes } from 'react-router-dom';
 import { Route } from 'react-router-dom';
@@ -12,9 +12,7 @@ function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const PrivateRoute = ({ element }) => {
-    return isAuthenticated ? element : <Navigate to="/home"/>
-  }
+
 
 
   return (
