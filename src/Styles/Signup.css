@@ -1,0 +1,128 @@
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, 
+      #667eea 0%, 
+      #764ba2 100%
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .signup-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+      circle at center, 
+      rgba(255,255,255,0.2) 0%, 
+      transparent 70%
+    );
+    animation: rotate 20s linear infinite;
+  }
+  
+  .signup-form-wrapper {
+    width: 100%;
+    max-width: 400px;
+    z-index: 2;
+  }
+  
+  .signup-form {
+    background: rgba(255,255,255,0.15);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    color: white;
+  }
+  
+  .signup-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .signup-form input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .signup-form input::placeholder {
+    color: rgba(255,255,255,0.7);
+  }
+  
+  .signup-form input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255,255,255,0.4);
+  }
+  
+  .signup-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .signup-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 1rem;
+    color: white;
+  }
+  
+  .login-link a {
+    color: #4ecdc4;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  @keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+  
+  @keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+  }
+  
+  @media (max-width: 480px) {
+    .signup-form-wrapper {
+      width: 90%;
+      padding: 1rem;
+    }
+  }
+
+  .error-message {
+    color: red;
+    font-family:sans-serif;
+    font-style: italic;
+    font-size: 0.8rem; /* Adjust size if needed */
+}
