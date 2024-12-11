@@ -1,20 +1,19 @@
 [build]
-  command = "npm run build"   # Your build command
-  publish = "build"           # The directory to deploy (React uses 'build')
-  branch = "main"             # Your Git branch for deployment
+  command = "npm run build"   # Build command
+  publish = "build"           # Output directory
+  branch = "main"             # Git branch to deploy
 
 [build.environment]
-  NODE_VERSION = "16"         # Ensure Node.js version matches your project
-
+  NODE_VERSION = "16"         # Environment variable
 
 [[redirects]]
-  from = "/*"
+  from = "/*"                 # Handle all routes
   to = "/index.html"
   status = 200
 
+
 [build]
   command = "npm run build"
-  publish = "dist"
 
 
 
